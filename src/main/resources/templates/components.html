@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>AcusticCompany</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th th:each="column : ${columns}" th:text="${column}"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="entityData : ${rows}">
+        <td th:text="${entityData.id}"></td>
+        <td th:text="${entityData.name}"></td>
+        <td th:text="${entityData.current_quantity}"></td>
+        <td th:text="${entityData.minimum_stock}"></td>
+        <td th:text="${entityData.company.name}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
+

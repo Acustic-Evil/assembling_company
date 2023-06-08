@@ -14,15 +14,16 @@
     </thead>
     <tbody>
     <tr th:each="entityData : ${rows}">
-        <td th:each="column : ${columns}" th:text="${entityData[column]}"></td>
-        <td>
-            <span th:if="${entityData.company != null}" th:text="${entityData.company.name}"></span>
-            <span th:unless="${entityData.company != null}"></span>
-        </td>
-
+        <td th:text="${entityData.id}"></td>
+        <td th:text="${entityData.delivery_date}"></td>
+        <td th:text="${entityData.scope_of_supply}"></td>
+        <td th:text="${entityData.wholesale_price}"></td>
+        <td th:text="${entityData.component_id.name}"></td>
+        <td th:text="${entityData.supplier_id.name}"></td>
     </tr>
     </tbody>
 </table>
 
 </body>
 </html>
+
